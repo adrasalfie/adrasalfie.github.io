@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Mahasiswa</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <div class="logo-and-title">
+        <img src="Image/logo4.png" alt="logo">
+        <h1>KM-ITERA</h1>
+    </div>
+</head>
+<body>
+    <hr style="width: 100%;">
+    <form>
+        <table>
+            <tr style="background-color: #6b4a4a">
+                <td><button class="tombol" type="button" onclick="window.location.href='index.html'">Home</button></a></td>
+                <td><button class="tombol" type="button" onclick="window.location.href='formulir.html'">Formulir</button></a></td>
+                <td><button class="tombol-active" type="button" onclick="window.location.href='table.html'">Data Anggota Kelas</button></a></td>
+            </tr>
+        </table>
+    </form>
+    <hr style="width: 100%;">
+
+    <div id="table-data">
+        <h1>Daftar Anggota Kabinet Wangsabatih</h1>
+
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Prodi</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+            </tr>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const nama = urlParams.get('nama');
+                const nim = urlParams.get('nim');
+                const prodi = urlParams.get('prodi');
+                const email = urlParams.get('email');
+                const password = urlParams.get('password');
+                const jenisKelamin = urlParams.get('jenis-kelamin');
+                const tanggalLahir = urlParams.get('tanggal-lahir');
+                const alamat = urlParams.get('alamat');
+        
+                if (nama) {
+                    const table = document.querySelector('div table');
+                    const newRow = table.insertRow(-1);
+        
+                    const cell1 = newRow.insertCell(0);
+                    cell1.textContent = nama;
+        
+                    const cell2 = newRow.insertCell(1);
+                    cell2.textContent = nim;
+        
+                    const cell3 = newRow.insertCell(2);
+                    cell3.textContent = prodi;
+        
+                    const cell4 = newRow.insertCell(3);
+                    cell4.textContent = email;
+        
+                    const cell5 = newRow.insertCell(4);
+                    cell5.textContent = "********";
+        
+                    const cell6 = newRow.insertCell(5);
+                    cell6.textContent = jenisKelamin;
+        
+                    const cell7 = newRow.insertCell(6);
+                    cell7.textContent = tanggalLahir;
+        
+                    const cell8 = newRow.insertCell(7);
+                    cell8.textContent = alamat;
+                }
+            </script>
+            <tr>
+                <td>Maverick Auclair</td>
+                <td>121140047</td>
+                <td>Teknik Elektro</td>
+                <td>Maverick.120140047@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-Laki</td>
+                <td>2002-08-02</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Winda Aranama</td>
+                <td>121140008</td>
+                <td>Farmasi</td>
+                <td>Winda.121140008@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2002-02-21</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Aksara Dirgantara</td>
+                <td>120140133</td>
+                <td>Arsitektur</td>
+                <td>Aksara.120140133@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-Laki</td>
+                <td>2002-06-06</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Juan Alvaro</td>
+                <td>120120111</td>
+                <td>Teknik Sipil</td>
+                <td>Juan.120120111@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-laki</td>
+                <td>2002-04-23</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Jisha Arindi</td>
+                <td>119140050</td>
+                <td>Bendahara Umum 1</td>
+                <td>Jisha.119140050@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2001-09-03</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Adra Salfie Nurazizaira </td>
+                <td>121140151</td>
+                <td>Teknik Informatika</td>
+                <td>Adra.121140151@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2003-09-17</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Na Jaemin</td>
+                <td>119140030</td>
+                <td>Teknik Biomedik</td>
+                <td>Na.119140030@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-Laki</td>
+                <td>2001-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Rizka Fauziyah</td>
+                <td>120122142</td>
+                <td>Sains Aktuaria</td>
+                <td>Rizka.120122142@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2002-06-08</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Nindhya Pramuditha</td>
+                <td>119123078</td>
+                <td>Teknik Geomatika</td>
+                <td>Nindhya.119123078@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2001-01-24</td>
+                <td>Bandar Lampung</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer>
+    <p>&copy; Hak Cipta 2023 - Adra Salfie Nurazizaira</p>
+</footer>
+</html>
